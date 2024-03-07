@@ -1,8 +1,8 @@
 {
-  "name": "udonswap_sdk",
+  "name": "udonswap",
   "license": "MIT",
-  "version": "3.0.2",
-  "description": "🛠 An SDK for building applications on top of Uniswap.",
+  "version": "1.0.0",
+  "description": "An SDK for UdonSwap Project.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -14,7 +14,8 @@
   },
   "keywords": [
     "uniswap",
-    "ethereum"
+    "ethereum",
+    "udonswap"
   ],
   "module": "dist/sdk.esm.js",
   "scripts": {
@@ -59,10 +60,6 @@
     "semi": false,
     "singleQuote": true
   },
-  "bugs": {
-    "url": "https://github.com/Uniswap/uniswap-sdk/issues"
-  },
-  "homepage": "https://github.com/Uniswap/uniswap-sdk#readme",
   "directories": {
     "test": "test"
   },
