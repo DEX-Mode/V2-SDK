@@ -6,7 +6,7 @@
 
 This is SDK version-1 of Udonswap Project and you can install it by type given command in Terminal:
 ```sh
-npm i udonswap
+npm i udonswap-v2
 ```
 
 
