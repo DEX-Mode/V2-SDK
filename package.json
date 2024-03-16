@@ -1,7 +1,7 @@
 {
-  "name": "udonswap",
+  "name": "udonswap-v2",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "An SDK for UdonSwap Project.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -15,7 +15,8 @@
   "keywords": [
     "uniswap",
     "ethereum",
-    "udonswap"
+    "udonswap",
+    "udonswap-v2"
   ],
   "module": "dist/sdk.esm.js",
   "scripts": {
