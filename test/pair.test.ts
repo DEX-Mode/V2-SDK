@@ -19,26 +19,16 @@ describe('Pair', () => {
   })
 
   describe('#token0', () => {
-    it('always is the token that sorts before', () => {
-      const pair1 = new Pair(new TokenAmount(LAMP, '100'), new TokenAmount(PIX, '100'))
-      // console.log('Token0 for pair1:', pair1.token0)
-      expect(pair1.token0).toEqual(PIX)
-
-      const pair2 = new Pair(new TokenAmount(PIX, '100'), new TokenAmount(LAMP, '100'))
-      // console.log('Token0 for pair2:', pair2.token0)
-      expect(pair2.token0).toEqual(PIX)
+    it('always is the token that sorts after', () => {
+      expect(new Pair(new TokenAmount(LAMP, '100'), new TokenAmount(PIX, '100')).token0).toEqual(PIX)
+      expect(new Pair(new TokenAmount(PIX, '100'), new TokenAmount(LAMP, '100')).token0).toEqual(PIX)
     })
   })
 
   describe('#token1', () => {
     it('always is the token that sorts after', () => {
-      const pair1 = new Pair(new TokenAmount(LAMP, '100'), new TokenAmount(PIX, '100'))
-      // console.log('Token0 for pair1:', pair1.token0)
-      expect(pair1.token0).toEqual(PIX)
-
-      const pair2 = new Pair(new TokenAmount(PIX, '100'), new TokenAmount(LAMP, '100'))
-      // console.log('Token0 for pair2:', pair2.token0)
-      expect(pair2.token0).toEqual(PIX)
+      expect(new Pair(new TokenAmount(LAMP, '100'), new TokenAmount(PIX, '100')).token1).toEqual(LAMP)
+      expect(new Pair(new TokenAmount(PIX, '100'), new TokenAmount(LAMP, '100')).token1).toEqual(LAMP)
     })
   })
 
