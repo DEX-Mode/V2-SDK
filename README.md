@@ -49,19 +49,35 @@ npm test
 You should see output like the following:
 
 ```sh
-yarn run v1.22.4
+yarn run v1.22.22
 $ tsdx test
- PASS  test/constants.test.ts
- PASS  test/pair.test.ts
+ RUNS  test/pair.test.ts
+ RUNS  test/pair.test.ts
+ RUNS  test/pair.test.ts
+ RUNS  test/pair.test.ts
+ RUNS  test/pair.test.ts
+ RUNS  test/pair.test.ts
+ RUNS  test/pair.test.ts
  PASS  test/fraction.test.ts
+ RUNS  test/pair.test.ts
+ RUNS  test/pair.test.ts
+ PASS  test/token.test.ts
+ RUNS  test/pair.test.ts
+ RUNS  test/pair.test.ts
+ PASS  test/router.test.ts
+ RUNS  test/pair.test.ts
  PASS  test/miscellaneous.test.ts
- PASS  test/entities.test.ts
+ RUNS  test/pair.test.ts
  PASS  test/trade.test.ts
+ PASS  test/entities.test.ts
+ PASS  test/constants.test.ts
+ PASS  test/route.test.ts
+ PASS  test/pair.test.ts (6.454s)
 
-Test Suites: 2 failed, 1 skipped, 7 passed, 9 of 10 total
-Tests:       2 failed, 3 skipped, 122 passed, 127 total
+Test Suites: 1 skipped, 9 passed, 9 of 10 total
+Tests:       3 skipped, 124 passed, 127 total
 Snapshots:   0 total
-Time:        34.1s
+Time:        9.114s
 Ran all test suites.
-✨  Done in 34.1s.
+Done in 10.60s.
 ```
