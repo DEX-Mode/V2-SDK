@@ -1,8 +1,8 @@
-import { Ether, Token, WETH9, CurrencyAmount } from 'udonswap-sdk-core'
+import { ETHER, Token, WETH9, CurrencyAmount } from 'udonswap-sdk-core'
 import { Pair, Route } from './index'
 
 describe('Route', () => {
-  const ETHER = Ether.onChain(1)
+  const ETH = ETHER.onChain(1)
   const token0 = new Token(1, '0x0000000000000000000000000000000000000001', 18, 't0')
   const token1 = new Token(1, '0x0000000000000000000000000000000000000002', 18, 't1')
   const weth = WETH9[1]
@@ -27,16 +27,16 @@ describe('Route', () => {
   })
 
   it('supports ether input', () => {
-    const route = new Route([pair_0_weth], ETHER, token0)
+    const route = new Route([pair_0_weth], ETH, token0)
     expect(route.pairs).toEqual([pair_0_weth])
-    expect(route.input).toEqual(ETHER)
+    expect(route.input).toEqual(ETH)
     expect(route.output).toEqual(token0)
   })
 
   it('supports ether output', () => {
-    const route = new Route([pair_0_weth], token0, ETHER)
+    const route = new Route([pair_0_weth], token0, ETH)
     expect(route.pairs).toEqual([pair_0_weth])
     expect(route.input).toEqual(token0)
-    expect(route.output).toEqual(ETHER)
+    expect(route.output).toEqual(ETH)
   })
 })

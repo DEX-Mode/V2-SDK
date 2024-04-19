@@ -2,7 +2,7 @@ import JSBI from 'jsbi'
 import { Pair, Route, Trade } from './entities'
 import { Router } from './router'
 import invariant from 'tiny-invariant'
-import { CurrencyAmount, Percent, Ether, Token, WETH9 } from 'udonswap-sdk-core'
+import { CurrencyAmount, Percent, ETHER, Token, WETH9 } from 'udonswap-sdk-core'
 
 function checkDeadline(deadline: string[] | string): void {
   expect(typeof deadline).toBe('string')
@@ -12,7 +12,7 @@ function checkDeadline(deadline: string[] | string): void {
 }
 
 describe('Router', () => {
-  const ETHER = Ether.onChain(1)
+  const ETHERIUM = ETHER.onChain(1)
   const token0 = new Token(1, '0x0000000000000000000000000000000000000001', 18, 't0')
   const token1 = new Token(1, '0x0000000000000000000000000000000000000002', 18, 't1')
 
@@ -31,8 +31,8 @@ describe('Router', () => {
       it.only('ether to token1', () => {
         const result = Router.swapCallParameters(
           Trade.exactIn(
-            new Route([pair_weth_0, pair_0_1], ETHER, token1),
-            CurrencyAmount.fromRawAmount(Ether.onChain(1), JSBI.BigInt(100))
+            new Route([pair_weth_0, pair_0_1], ETHERIUM, token1),
+            CurrencyAmount.fromRawAmount(ETHER.onChain(1), JSBI.BigInt(100))
           ),
           { ttl: 50, recipient: '0x0000000000000000000000000000000000000004', allowedSlippage: new Percent('1', '100') }
         )
@@ -49,8 +49,8 @@ describe('Router', () => {
       it('deadline specified', () => {
         const result = Router.swapCallParameters(
           Trade.exactIn(
-            new Route([pair_weth_0, pair_0_1], ETHER, token1),
-            CurrencyAmount.fromRawAmount(Ether.onChain(1), JSBI.BigInt(100))
+            new Route([pair_weth_0, pair_0_1], ETHERIUM, token1),
+            CurrencyAmount.fromRawAmount(ETHER.onChain(1), JSBI.BigInt(100))
           ),
           {
             deadline: 50,
@@ -71,7 +71,7 @@ describe('Router', () => {
       it('token1 to ether', () => {
         const result = Router.swapCallParameters(
           Trade.exactIn(
-            new Route([pair_0_1, pair_weth_0], token1, ETHER),
+            new Route([pair_0_1, pair_weth_0], token1, ETHERIUM),
             CurrencyAmount.fromRawAmount(token1, JSBI.BigInt(100))
           ),
           { ttl: 50, recipient: '0x0000000000000000000000000000000000000004', allowedSlippage: new Percent('1', '100') }
@@ -106,7 +106,7 @@ describe('Router', () => {
       it('ether to token1', () => {
         const result = Router.swapCallParameters(
           Trade.exactOut(
-            new Route([pair_weth_0, pair_0_1], ETHER, token1),
+            new Route([pair_weth_0, pair_0_1], ETHERIUM, token1),
             CurrencyAmount.fromRawAmount(token1, JSBI.BigInt(100))
           ),
           { ttl: 50, recipient: '0x0000000000000000000000000000000000000004', allowedSlippage: new Percent('1', '100') }
@@ -123,8 +123,8 @@ describe('Router', () => {
       it('token1 to ether', () => {
         const result = Router.swapCallParameters(
           Trade.exactOut(
-            new Route([pair_0_1, pair_weth_0], token1, ETHER),
-            CurrencyAmount.fromRawAmount(Ether.onChain(1), JSBI.BigInt(100))
+            new Route([pair_0_1, pair_weth_0], token1, ETHERIUM),
+            CurrencyAmount.fromRawAmount(ETHER.onChain(1), JSBI.BigInt(100))
           ),
           { ttl: 50, recipient: '0x0000000000000000000000000000000000000004', allowedSlippage: new Percent('1', '100') }
         )
@@ -159,8 +159,8 @@ describe('Router', () => {
         it('ether to token1', () => {
           const result = Router.swapCallParameters(
             Trade.exactIn(
-              new Route([pair_weth_0, pair_0_1], ETHER, token1),
-              CurrencyAmount.fromRawAmount(Ether.onChain(1), JSBI.BigInt(100))
+              new Route([pair_weth_0, pair_0_1], ETHERIUM, token1),
+              CurrencyAmount.fromRawAmount(ETHER.onChain(1), JSBI.BigInt(100))
             ),
             {
               ttl: 50,
@@ -181,7 +181,7 @@ describe('Router', () => {
         it('token1 to ether', () => {
           const result = Router.swapCallParameters(
             Trade.exactIn(
-              new Route([pair_0_1, pair_weth_0], token1, ETHER),
+              new Route([pair_0_1, pair_weth_0], token1, ETHERIUM),
               CurrencyAmount.fromRawAmount(token1, JSBI.BigInt(100))
             ),
             {
@@ -230,7 +230,7 @@ describe('Router', () => {
           expect(() =>
             Router.swapCallParameters(
               Trade.exactOut(
-                new Route([pair_weth_0, pair_0_1], ETHER, token1),
+                new Route([pair_weth_0, pair_0_1], ETHERIUM, token1),
                 CurrencyAmount.fromRawAmount(token1, JSBI.BigInt(100))
               ),
               {
@@ -246,8 +246,8 @@ describe('Router', () => {
           expect(() =>
             Router.swapCallParameters(
               Trade.exactOut(
-                new Route([pair_0_1, pair_weth_0], token1, ETHER),
-                CurrencyAmount.fromRawAmount(Ether.onChain(1), JSBI.BigInt(100))
+                new Route([pair_0_1, pair_weth_0], token1, ETHERIUM),
+                CurrencyAmount.fromRawAmount(ETHER.onChain(1), JSBI.BigInt(100))
               ),
               {
                 ttl: 50,
