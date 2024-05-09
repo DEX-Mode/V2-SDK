@@ -1,7 +1,7 @@
 {
   "name": "udonswap-v2-sdk",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An SDK for UdonSwap Project.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
