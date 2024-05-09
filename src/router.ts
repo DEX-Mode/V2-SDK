@@ -1,4 +1,4 @@
-import { Token, Currency, CurrencyAmount, Percent, TradeType, validateAndParseAddress } from 'udonswap-sdk-core'
+import { Token, Currency, CurrencyAmount, Percent, TradeType, validateAndParseAddress } from 'udonswap-core'
 import { Trade } from './entities'
 import invariant from 'tiny-invariant'
 

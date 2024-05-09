@@ -1,4 +1,4 @@
-import { ETHER, Token, WETH9, CurrencyAmount } from 'udonswap-sdk-core'
+import { ETHER, Token, WETH9, CurrencyAmount } from 'udonswap-core'
 import { Pair, Route } from './index'
 
 describe('Route', () => {

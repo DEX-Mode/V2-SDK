@@ -6642,10 +6642,10 @@ typescript@^3.7.3:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.10.tgz#70f3910ac7a51ed6bef79da7800690b19bf778b8"
   integrity sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q==
 
-udonswap-sdk-core@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/udonswap-sdk-core/-/udonswap-sdk-core-1.0.2.tgz#f8c37e80204b37e5c0e7b80e35dbdd9567a3beaa"
-  integrity sha512-O7gWdtivX/qB0YXVgh8vwkNQwFx5HVhc8r07yEyJ2D77uHQ8uOT2c8rxwHHv+GWSe7f3DPC1siJsG2ciIrmEeQ==
+udonswap-core@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/udonswap-core/-/udonswap-core-1.0.0.tgz#fd4bc615ef84d7ca940c7bc92df067195303d094"
+  integrity sha512-6vtgLA4PUBe6Srrj2Z6JC7+k6Y80ETNLPaeeIMICn9Fzh7sK3bwOYn7c1O/JQwhKR/0gbPc5DjungvpqstyHDg==
   dependencies:
     "@ethersproject/address" "^5.0.2"
     big.js "^5.2.2"

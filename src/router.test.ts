@@ -2,7 +2,7 @@ import JSBI from 'jsbi'
 import { Pair, Route, Trade } from './entities'
 import { Router } from './router'
 import invariant from 'tiny-invariant'
-import { CurrencyAmount, Percent, ETHER, Token, WETH9 } from 'udonswap-sdk-core'
+import { CurrencyAmount, Percent, ETHER, Token, WETH9 } from 'udonswap-core'
 
 function checkDeadline(deadline: string[] | string): void {
   expect(typeof deadline).toBe('string')

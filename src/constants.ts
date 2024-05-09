@@ -1,4 +1,4 @@
-import { Percent, V2_FACTORY_ADDRESSES } from 'udonswap-sdk-core'
+import { Percent, V2_FACTORY_ADDRESSES } from 'udonswap-core'
 import JSBI from 'jsbi'
 
 /**

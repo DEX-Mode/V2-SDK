@@ -8,7 +8,7 @@ import {
   Price,
   sortedInsert,
   TradeType
-} from 'udonswap-sdk-core'
+} from 'udonswap-core'
 import { ONE, ZERO } from '../constants'
 import invariant from 'tiny-invariant'
 

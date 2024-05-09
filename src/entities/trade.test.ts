@@ -2,7 +2,7 @@ import { Pair } from './pair'
 import { Route } from './route'
 import { Trade } from './trade'
 import JSBI from 'jsbi'
-import { ETHER, CurrencyAmount, Percent, Token, TradeType, WETH9, Price } from 'udonswap-sdk-core'
+import { ETHER, CurrencyAmount, Percent, Token, TradeType, WETH9, Price } from 'udonswap-core'
 
 describe('Trade', () => {
   const ETHERIUM = ETHER.onChain(1)
