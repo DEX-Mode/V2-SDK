@@ -4,7 +4,7 @@ import JSBI from 'jsbi'
 /**
  * @deprecated use FACTORY_ADDRESS_MAP instead
  */
-export const FACTORY_ADDRESS = '0x2eeFa13703Eb4483Aa588Fd5D6bfb034E1FB8d97'
+export const FACTORY_ADDRESS = '0x2eeFa13703Eb4483Aa588Fd5D6bfb034E1FB8d97' // mode testnet - UniswapV2Factory
 
 export const FACTORY_ADDRESS_MAP: { [chainId: number]: string } = V2_FACTORY_ADDRESSES
 
